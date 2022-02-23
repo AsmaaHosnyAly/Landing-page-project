@@ -23,4 +23,5 @@ I succeed to :
 * Add a scroll to top button on the page that’s only visible when the user scrolls below the fold of the page.
 
 * Update/change the design/content.
-* Make sections collapsible.
+* Still working in delete section feature
+*Still Make sections collapsible feature.

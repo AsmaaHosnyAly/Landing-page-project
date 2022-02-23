@@ -8,216 +8,443 @@
  *
 */
 
-
 /* ---- Base Rules ---- */
-body {
-    background: rgb(136,203,171);
-    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
-    margin: 0;
-    font-family: 'Merriweather', serif;
-    color: #fff;
-}
+/* html {
+    scroll-behavior: smooth;
+} */
 
+body {
+  background: #717171;
+  background: linear-gradient(
+    0deg,
+    
+    rgba(55, 56, 3, 0.623) 0%,
+    rgba(82, 4, 8, 0.623)50%,
+    rgba(0, 13, 60, 1) 100%
+  );
+  margin: 0;
+  font-family: "Merriweather", serif;
+  color: #fff;
+}
 
 /* Typeography General*/
 h1 {
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 3em;
-    margin: 2em 1rem;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 10px;
+  margin: 2em 1rem;
+  
+  color: rgb(41, 3, 51);
 }
 
-@media only screen and (min-width: 35em){
-    h1 {
-        font-size: 7em;
-        margin: 2em 4rem 1em;
-    }
+@media only screen and (min-width: 40em) {
+  h1 {
+    font-size: 2.8em;
+    line-height: 1em;
+    margin: 1.8em 1rem 4em 6em;
+    width: 40%;
+    transform: translateX(-180px) rotate(10deg);
+    -webkit-transform: translateX(-180px) rotate(10deg);
+    -moz-transform: translateX(-180px) rotate(10deg);
+    -ms-transform: translateX(-180px) rotate(10deg);
+    -o-transform: translateX(-180px) rotate(10deg);
+}
 }
 
 h2 {
-    border-bottom: 1px solid #cc1;
-    font-family: 'Oxygen', Sans-Serif;
-    font-size: 3em;
-    color: #fff;
+  border-bottom: 1px solid rgb(13, 1, 36);
+  font-family: "Oxygen", Sans-Serif;
+  font-size: 2em;
+  color: #fff;
 }
 
 p {
-    line-height: 1.6em;
-    color: #eee;
+  line-height: 1.6em;
+  color: #eee;
 }
 
 /* ---- Layout Rules ---- */
 main {
-    margin: 10vh 1em 10vh;
+  margin: 10vh 1em 10vh;
 }
 
 .main-hero {
-    min-height: 40vh;
-    padding-top: 3em;
+  min-height: 40vh;
+  padding-top: 3em;
 }
 
 section {
-    position: relative;
-    min-height: 80vh;
+  position: relative;
+  min-height: 90vh;
+  
+}
+header{
+  width: 100%;
+  margin: auto;
 }
 
+ .img__hero{
+  position: relative;
+  margin-top: 70px;
+}
+ .heading__hero{
+
+  position: absolute;
+  top: 2px;
+  width: 100%;
+ 
+}
+.header__content{
+  width: 100%;
+  display: flex;
+ justify-content: space-around;
+}
+div.form{
+  width: 30%;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+}
+form{
+  width: 100%;
+  height: 360px;
+  margin-top: 150px;
+  background-color: rgb(14 123 109);
+  border: 0px;
+  border-radius: 5px;
+  position: absolute;
+  box-shadow: 20px 10px 40px  rgb(245, 245, 247);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.form h2{
+  width: 100%;
+  text-align: center;
+}
+.form input{
+  display: block;
+  padding: 10px;
+  margin:auto;
+  margin-top: 20px;
+  width: 70%;
+  text-align: center;
+  border: 1px solid rgb(243, 241, 247);
+  box-shadow: 1px 2px 1px 1px rgb(21, 4, 61);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  box-shadow: #550606;
+}
+
+form input[type=submit]{
+  width: 75%;
+  padding: 10px 10px;
+  color: #fff;
+  background-color:rgb(14, 2, 43);
+  
+
+}
+
+form input[type=submit]:hover{
+
+  background-color:rgb(238, 236, 243);
+  color: #000;
+}
 
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
+/***********************************  a button to make more sections  *****************************/
+
 .navbar__menu ul {
-    padding-left: 0;
-    margin: 0;
-    text-align: right;
+  margin: 0;
+  text-align: center;
 }
 
 .navbar__menu li {
-    display: inline-block;
+  display: inline-block;
 }
-
 .navbar__menu .menu__link {
-    display: block;
-    padding: 1em;
-    font-weight: bold;
-    text-decoration: none;
-    color: #000;
+  display: block;
+  padding: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  color:  rgb(14, 123, 109);
 }
 
 .navbar__menu .menu__link:hover {
-    background: #333;
-    color: #fff;
-    transition: ease 0.3s all;
+  background:  rgb(14, 123, 109);
+  border-radius: 20px;
+  color: #fff;
+  transition: ease 0.3s all;
+  -webkit-transition: ease 0.3s all;
+  -moz-transition: ease 0.3s all;
+  -ms-transition: ease 0.3s all;
+  -o-transition: ease 0.3s all;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
-/* Header Styles */
-.page__header {
-    background: #fff;
-    position: fixed;
-    top: 0;
+/********************************** make a different style for active links ***********************/
+.navbar__menu .active-link {
+  background:  rgb(14, 123, 109);
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  transition: ease 0.3s all;
+  -webkit-transition: ease 0.3s all;
+  -moz-transition: ease 0.3s all;
+  -ms-transition: ease 0.3s all;
+  -o-transition: ease 0.3s all;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+header{
+  position: relative;
+}
+nav{
+  position: absolute;
+  margin: auto;
+  background: rgba(241, 238, 238, 0.815); 
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+
+}
+
+.Accordion{
+  display: flex;
+  justify-content: space-between;
+}
+button.collaps{
     width: 100%;
-    z-index: 5;
+    border:none;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    /*background-color: #550606;
+    */padding: 10px 5px;
+  
+}
+button.collaps:hover{
+    background-color: rgb(6, 5, 48);
+}
+.collaps::after{
+  content: "\002b";
+  font-size: 40px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-color: #eee;
+  border-radius:50%;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  -ms-border-radius:50%;
+  -o-border-radius:50%;
+  -webkit-border-radius:50%;
+}
+
+
+div .delete-btn{
+ font-size: 70px;
+ width: 30px;
+ height: 30px;
+    
+}
+.desc{
+  /* display: none; */
 }
 
 /* Footer Styles */
 .page__footer {
-    background: #000;
-    padding: 3em;
-    color: #fff;
+  background: #000;
+  padding: 3em;
+  color: #fff;
 }
 
-.page__footer p{
-    color: #fff;
+.page__footer p {
+  color: #fff;
 }
-
 
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
 .landing__container {
-    padding: 1em;
-    text-align: left;
+  width: 100%;
+  padding: 1em;
+  text-align: left;
 }
 
-@media only screen and (min-width: 35em){
-    .landing__container {
-        max-width: 50em;
-        padding: 4em;
-    }
+@media only screen and (min-width: 35em) {
+  .landing__container {
+    max-width: 50em;
+    padding: 4em;
+  }
 }
 
 section:nth-of-type(even) .landing__container {
-    margin-right: 0;
-    margin-left: auto;
-    text-align: right; 
+  margin-right: 0;
+  margin-left: auto;
+  text-align: right;
 }
 
 /* Background Circles */
 /* Note that background circles are created with psuedo elements before and after */
 /* Circles appear to be random do to use of :nth-of-type psuedo class */
 section:nth-of-type(odd) .landing__container::before {
-    content: '';
-    background: rgba(255, 255, 255, 0.187);
-    position: absolute;
-    z-index: -5;
-    width: 20vh;
-    height: 20vh;
-    border-radius: 50%;
-    opacity: 0;
-    transition: ease 0.5s all;
+  content: "";
+  background: rgba(255, 255, 255, 0.187);
+  position: absolute;
+  z-index: -5;
+  width: 20vh;
+  height: 20vh;
+  border-radius: 50%;
+  opacity: 0;
+  transition: ease 0.5s all;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-transition: ease 0.5s all;
+  -moz-transition: ease 0.5s all;
+  -ms-transition: ease 0.5s all;
+  -o-transition: ease 0.5s all;
 }
 
 section:nth-of-type(even) .landing__container::before {
-    content: '';
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
-    position: absolute;
-    top: 3em;
-    right: 3em;
-    z-index: -5;
-    width: 10vh;
-    height: 10vh;
-    border-radius: 50%;
-    opacity: 0;
-    transition: ease 0.5s all;
+  content: "";
+  background: rgb(255, 255, 255);
+  background: linear-gradient(    0deg,    rgba(255, 255, 255, 0.1) 0%,    rgba(255, 255, 255, 0.2) 100%  );
+  position: absolute;
+  top: 3em;
+  right: 3em;
+  z-index: -5;
+  width: 10vh;
+  height: 10vh;
+  opacity: 0;
+  transition: ease 0.5s all;
+  border-radius: 50%;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  -ms-border-radius:50%;
+  -o-border-radius:50%;
+  -webkit-transition: ease 0.5s all;
+  -moz-transition: ease 0.5s all;
+  -ms-transition: ease 0.5s all;
+  -o-transition: ease 0.5s all;
 }
 
 section:nth-of-type(3n) .landing__container::after {
-    content: '';
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -5;
-    width: 10vh;
-    height: 10vh;
-    border-radius: 50%;
-    opacity: 0;
-    transition: ease 0.5s all;
+  content: "";
+  background: rgb(255, 255, 255);
+  background: linear-gradient(    0deg,    rgba(255, 255, 255, 0.1) 0%,    rgba(255, 255, 255, 0.2) 100%  );
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -5;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  opacity: 0;
+  transition: ease 0.5s all;
+  -webkit-transition: ease 0.5s all;
+  -moz-transition: ease 0.5s all;
+  -ms-transition: ease 0.5s all;
+  -o-transition: ease 0.5s all;
 }
 
 section:nth-of-type(3n + 1) .landing__container::after {
-    content: '';
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
-    position: absolute;
-    right: 20vw;
-    bottom: -5em;
-    z-index: -5;
-    width: 15vh;
-    height: 15vh;
-    border-radius: 50%;
-    opacity: 0;
-    transition: ease 0.5s all;
+  content: "";
+  background: rgb(255, 255, 255);
+  background: linear-gradient(    0deg,    rgba(255, 255, 255, 0.1) 0%,    rgba(255, 255, 255, 0.2) 100%  );
+  position: absolute;
+  right: 20vw;
+  bottom: -5em;
+  z-index: -5;
+  width: 15vh;
+  height: 15vh;
+  border-radius: 50%;
+  opacity: 0;
+  transition: ease 0.5s all;
+  -webkit-transition: ease 0.5s all;
+  -moz-transition: ease 0.5s all;
+  -ms-transition: ease 0.5s all;
+  -o-transition: ease 0.5s all;
 }
-
 
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 section.your-active-class {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+  background: rgb(14 123 109 0.5);
+  background: linear-gradient(    0deg,    rgb(14 123 109/ 69%) 0%,    rgb(0 0 0 / 45%) 100%  );
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
 section.your-active-class .landing__container::before {
-    opacity: 1;
-    animation: rotate 4s linear 0s infinite forwards;
+  opacity: 1;
+  animation: rotate 4s linear 0s infinite forwards;
+  -webkit-animation: rotate 4s linear 0s infinite forwards;
 }
 
 section.your-active-class .landing__container::after {
-    opacity: 1;
-    animation: rotate 5s linear 0s infinite forwards reverse;
+  opacity: 1;
+  animation: rotate 5s linear 0s infinite forwards reverse;
+  -webkit-animation: rotate 5s linear 0s infinite forwards reverse;
 }
 
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {
-	from {
-		transform: rotate(0deg)
-		           translate(-1em)
-		           rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg)
-		           translate(-1em) 
-		           rotate(-360deg);
-	}
+  from {
+    transform: rotate(0deg) translate(-1em) rotate(0deg);
+    -webkit-transform: rotate(0deg) translate(-1em) rotate(0deg);
+    -moz-transform: rotate(0deg) translate(-1em) rotate(0deg);
+    -ms-transform: rotate(0deg) translate(-1em) rotate(0deg);
+    -o-transform: rotate(0deg) translate(-1em) rotate(0deg);
+}
+  to {
+    transform: rotate(360deg) translate(-1em) rotate(-360deg);
+    -webkit-transform: rotate(360deg) translate(-1em) rotate(-360deg);
+    -moz-transform: rotate(360deg) translate(-1em) rotate(-360deg);
+    -ms-transform: rotate(360deg) translate(-1em) rotate(-360deg);
+    -o-transform: rotate(360deg) translate(-1em) rotate(-360deg);
+}
+}
+/****************************** making some changes on the button on small screens **************************/
+@media only screen and (max-width: 39.5em) {
+  
+  .img__hero{
+      display:none;
+  }
+  
+
+  
+}
+#to-top {
+  border: 0;
+  border-radius:50%;
+  color: rgb(238, 245, 244);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  display:none;
+  cursor: pointer;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  -ms-border-radius:50%;
+  -o-border-radius:50%;
 }

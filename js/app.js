@@ -42,17 +42,15 @@ function BuildWebsit(items) {
   items.forEach((item) => {
     const content = `<section id="section${item.sectionId}" data-nav="${item.name}">
     <div class="landing__container">
-      <div class="Accordion">
+      
         <h2>${item.name}${item.sectionId}<span  onclick="deleteSection(${item.sectionId})"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-x-square-fill" viewBox="0 0 16 16">
          <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
          </svg><span> </h2>
          <button class="collaps"> </button>
-      </div>
-        <div class="desc">
           <p>${item.content}</p>
           <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-        </div>
- </div>
+        
+     </div>
 
     </section>`;
     document.querySelector("main").insertAdjacentHTML("beforeend", content);
@@ -197,8 +195,8 @@ toTop.addEventListener("click", () => {
   document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
 });
 // /**
-//  * disappear the header after 8 seconds and appear again when scrolling.
-//  * appearing the icon(to-top) after 8000px to down
+//  * the header  will hidden   after 8 seconds and appear again when scrolling.
+//  * button to top will appear  after scroll to down with 500 hight 
 //  */
 
 let isScrolling;
@@ -214,7 +212,7 @@ document.onscroll = () => {
 };
 
 
-
+// collaps Sections still working on this feature
 document.querySelector("collaps").addEventListener("click",()=>{
 
   document.querySelector("desc").style.display="block";
